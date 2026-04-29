@@ -1,0 +1,54 @@
+---
+import DocsLayout from "../../layouts/DocsLayout.astro";
+---
+
+<DocsLayout
+  title="Themes"
+  description="Customize the look of RefleK's with built-in themes."
+  prevPage={{ slug: "mouse-tracking", title: "Mouse Movement" }}
+  nextPage={{ slug: "stats-folder", title: "Stats Folder Issues" }}
+>
+  <h2>Available Themes</h2>
+  <p>
+    RefleK's includes three built-in themes. Theme changes apply instantly and
+    persist between app restarts.
+  </p>
+
+  <ul>
+    <li>
+      <strong>Dark</strong> - Default dark theme with blue accents and the most familiar
+      app styling.
+    </li>
+    <li>
+      <strong>Darker</strong> - A deeper dark theme with stronger contrast for a more
+      subdued look.
+    </li>
+    <li>
+      <strong>Light</strong> - Clean light theme for daytime use and brighter environments.
+    </li>
+  </ul>
+
+  <h2>Changing Themes</h2>
+  <ol>
+    <li>Open Settings (gear icon in the top right)</li>
+    <li>Go to Appearance → Theme</li>
+    <li>Select your preferred theme</li>
+    <li>The theme applies immediately</li>
+  </ol>
+
+  <h2>Font Options</h2>
+  <p>You can also customize the font used throughout the app:</p>
+  <ul>
+    <li><strong>Montserrat</strong> - Clean, modern sans-serif (default)</li>
+    <li><strong>Inter</strong> - Highly legible interface font</li>
+    <li>
+      <strong>JetBrains Mono UI</strong> - Monospace font for a technical look
+    </li>
+  </ul>
+
+  <h2>Theme Persistence</h2>
+  <p>
+    Your theme and font preferences are saved automatically and persist between
+    app restarts.
+  </p>
+</DocsLayout>
