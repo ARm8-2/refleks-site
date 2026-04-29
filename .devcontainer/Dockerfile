@@ -25,4 +25,4 @@ RUN curl -fsSL https://deb.nodesource.com/setup_22.x | bash - && \
 USER $USERNAME
 ENV HOME=/home/$USERNAME
 
-WORKDIR /workspaces/refleks-index
+WORKDIR /workspaces/refleks-site
