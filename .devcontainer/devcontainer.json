@@ -1,0 +1,14 @@
+{
+	"name": "RefleK's Site",
+	"build": {
+		"dockerfile": "Dockerfile"
+	},
+	"customizations": {
+		"vscode": {
+			"extensions": [
+        "astro-build.astro-vscode",
+				"bradlc.vscode-tailwindcss"
+			]
+		}
+	}
+}
