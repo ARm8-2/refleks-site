@@ -23,19 +23,21 @@ const isActiveLink = (href: string) => {
 
 <header class="sticky top-0 z-50 bg-bg-primary/95 backdrop-blur-md">
   <nav
-    class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-14 flex items-center justify-between"
+    class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-14 flex items-center justify-between relative"
   >
     <!-- Logo - clicks to home -->
     <a
       href="/"
-      class="flex items-center gap-2 text-xl font-medium text-text-primary hover:text-accent-primary transition-colors"
+      class="flex items-center gap-2 text-xl font-medium text-text-primary hover:text-accent-primary transition-colors shrink-0"
     >
       <img src="/assets/icons/logo.svg" alt="RefleK's" class="w-8 h-8" />
       <span>RefleK's</span>
     </a>
 
-    <!-- Desktop Nav -->
-    <div class="hidden md:flex items-center gap-1">
+    <!-- Desktop Nav - Absolutely Centered on Screen -->
+    <div
+      class="hidden md:flex absolute left-1/2 -translate-x-1/2 items-center gap-1"
+    >
       {
         navLinks.map((link) => (
           <a
@@ -53,7 +55,7 @@ const isActiveLink = (href: string) => {
     </div>
 
     <!-- CTA Button (Desktop) -->
-    <div class="hidden md:flex items-center gap-3">
+    <div class="hidden md:flex items-center gap-3 shrink-0">
       <a
         href="https://ko-fi.com/mattisvdrd"
         target="_blank"
