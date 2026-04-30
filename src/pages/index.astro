@@ -1,0 +1,296 @@
+---
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const bigFeatures = [
+  {
+    title: "Overview dashboard",
+    description:
+      "See your latest performance, current streak, session progress, and benchmark focus areas in one place.",
+    image: "/assets/images/overview.webp",
+    alt: "Overview dashboard with stats cards and benchmark tracker",
+  },
+  {
+    title: "Benchmarks and progression",
+    description:
+      "Track benchmark tiers, compare targets, and find the next scenario to focus.",
+    image: "/assets/images/benchmarks_explore_recommended.webp",
+    alt: "Benchmark browser with highlighted recommended scenarios",
+  },
+];
+
+const smallFeatures = [
+  {
+    title: "In-depth run analysis",
+    description:
+      "Inspect TTK, accuracy, recent score curves, and pinned versus compare overlays.",
+    image: "/assets/images/history_analysis_overlay.webp",
+    alt: "Run analysis chart with overlaid pinned and compare lines",
+  },
+  {
+    title: "Mouse movement tracking",
+    description:
+      "Visualize your mouse trajectories, view detailed movement patterns, and understand your crosshair placement over time.",
+    image: "/assets/images/mouse.webp",
+    alt: "Mouse movement visualization with trajectory overlay",
+  },
+  {
+    title: "Session overview",
+    description:
+      "Review each session with timeline context, score progression, and scenario breakdowns.",
+    image: "/assets/images/history_session.webp",
+    alt: "Session view with scenario summaries and trend chart",
+  },
+];
+---
+
+<BaseLayout title="RefleK's - KovaaK's Analytics & Insights">
+  <Header slot="header" currentPath="/" />
+
+  <!-- Hero -->
+  <section class="pt-20 pb-8 sm:pt-24 sm:pb-12">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto">
+        <p class="text-accent-primary font-medium text-sm mb-3">
+          Free and Open Source
+        </p>
+        <h1
+          class="text-4xl sm:text-5xl md:text-6xl font-semibold tracking-tight"
+        >
+          <span class="gradient-text">RefleK's</span>
+        </h1>
+        <p class="mt-4 sm:mt-6 text-lg sm:text-xl text-text-secondary">
+          Your aim trainer gives scores. RefleK's gives answers.
+        </p>
+        <p class="mt-4 text-base text-text-muted max-w-xl mx-auto">
+          A free, open-source desktop app that automatically tracks your
+          KovaaK's practice sessions and helps you understand your improvement.
+        </p>
+        <div class="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
+          <a
+            href="https://github.com/ARm8-2/refleks/releases/latest"
+            target="_blank"
+            rel="noopener"
+            class="inline-flex items-center justify-center px-6 py-3.5 rounded-xl bg-accent-primary text-white font-semibold hover:bg-accent-hover transition-[background-color,box-shadow] duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-light min-h-12 shadow-sm"
+          >
+            Download for Windows
+          </a>
+          <a
+            href="/docs"
+            class="inline-flex items-center justify-center px-6 py-3.5 rounded-xl bg-bg-secondary text-text-primary hover:bg-bg-hover transition-[background-color,box-shadow] duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-primary min-h-12 shadow-sm"
+          >
+            Get Started
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- App Preview -->
+  <section class="py-12 sm:py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="video-container">
+        <video
+          autoplay
+          loop
+          muted
+          playsinline
+          poster="/assets/images/showcase_frame1.webp"
+          width="1280"
+          height="720"
+        >
+          <source src="/assets/showcase.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section id="features" class="py-12 sm:py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-10">
+        <h2
+          class="text-2xl sm:text-3xl md:text-4xl font-medium text-text-primary"
+        >
+          Focused features, no clutter
+        </h2>
+        <p class="mt-4 text-text-muted">
+          Everything below is available in one streamlined workflow: track,
+          review, compare, improve.
+        </p>
+      </div>
+
+      <div class="space-y-8 sm:space-y-10">
+        <article
+          class="feature-card rounded-xl bg-bg-secondary overflow-hidden"
+        >
+          <div class="grid grid-cols-1 lg:grid-cols-3 min-h-80">
+            <div class="p-6 sm:p-8 lg:p-10 flex flex-col justify-center">
+              <h3 class="text-xl sm:text-2xl font-semibold text-text-primary">
+                {bigFeatures[0].title}
+              </h3>
+              <p class="mt-3 text-text-muted text-sm leading-relaxed">
+                {bigFeatures[0].description}
+              </p>
+            </div>
+            <div
+              class="lg:col-span-2 p-4 sm:p-6 flex items-center justify-center bg-bg-tertiary/50"
+            >
+              <div class="rounded-xl overflow-hidden shadow-2xl w-full">
+                <img
+                  src={bigFeatures[0].image}
+                  alt={bigFeatures[0].alt}
+                  loading="lazy"
+                  width="3000"
+                  height="1800"
+                  class="w-full h-auto"
+                />
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article
+          class="feature-card rounded-xl bg-bg-secondary overflow-hidden"
+        >
+          <div class="grid grid-cols-1 lg:grid-cols-3 min-h-80">
+            <div
+              class="p-6 sm:p-8 lg:p-10 flex flex-col justify-center order-1 lg:order-2"
+            >
+              <h3 class="text-xl sm:text-2xl font-semibold text-text-primary">
+                {bigFeatures[1].title}
+              </h3>
+              <p class="mt-3 text-text-muted text-sm leading-relaxed">
+                {bigFeatures[1].description}
+              </p>
+            </div>
+            <div
+              class="lg:col-span-2 p-4 sm:p-6 flex items-center justify-center bg-bg-tertiary/50 order-2 lg:order-1"
+            >
+              <div class="rounded-xl overflow-hidden shadow-2xl w-full">
+                <img
+                  src={bigFeatures[1].image}
+                  alt={bigFeatures[1].alt}
+                  loading="lazy"
+                  width="3000"
+                  height="1800"
+                  class="w-full h-auto"
+                />
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          {
+            smallFeatures.map((feature) => (
+              <article class="rounded-xl bg-bg-secondary overflow-hidden flex flex-col">
+                <div class="p-4 sm:p-6 flex items-center justify-center bg-bg-tertiary/50 h-56">
+                  <div class="rounded-xl overflow-hidden shadow-2xl w-full h-full">
+                    <img
+                      src={feature.image}
+                      alt={feature.alt}
+                      loading="lazy"
+                      width="3000"
+                      height="1800"
+                      class="w-full h-full object-cover object-center scale-175 will-change-transform"
+                    />
+                  </div>
+                </div>
+                <div class="p-5">
+                  <h3 class="text-base font-semibold text-text-primary">
+                    {feature.title}
+                  </h3>
+                  <p class="mt-2 text-sm text-text-muted leading-relaxed">
+                    {feature.description}
+                  </p>
+                </div>
+              </article>
+            ))
+          }
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Open Source Widget -->
+  <section class="py-16 sm:py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="rounded-xl bg-bg-secondary overflow-hidden">
+        <div class="p-8 sm:p-10 lg:p-12 text-center">
+          <div
+            class="w-12 h-12 rounded-xl bg-accent-primary/20 flex items-center justify-center mx-auto mb-4"
+          >
+            <svg
+              class="w-6 h-6 text-accent-primary"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl sm:text-2xl font-bold text-text-primary mb-3">
+            Free and Open Source
+          </h3>
+          <p class="text-text-muted max-w-xl mx-auto mb-6">
+            RefleK's is licensed under GPL v3. Inspect the code, contribute
+            improvements, or fork it to build your own workflow.
+          </p>
+          <a
+            href="https://github.com/ARm8-2/refleks"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-2 text-accent-primary hover:text-accent-light font-medium transition-colors"
+          >
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
+              ></path>
+            </svg>
+            View on GitHub
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-16 sm:py-24">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2
+        class="text-2xl sm:text-3xl md:text-4xl font-medium text-text-primary"
+      >
+        Try RefleK's now
+      </h2>
+      <p class="mt-4 text-text-muted max-w-2xl mx-auto">
+        Download RefleK's for free and start getting real insights into your
+        practice.
+      </p>
+      <div class="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
+        <a
+          href="https://github.com/ARm8-2/refleks/releases/latest"
+          target="_blank"
+          rel="noopener"
+          class="inline-flex items-center justify-center px-6 py-3.5 rounded-xl bg-accent-primary text-white font-semibold hover:bg-accent-hover transition-[background-color,box-shadow] duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-light min-h-12 shadow-sm"
+        >
+          Download for Windows
+        </a>
+        <a
+          href="/docs"
+          class="inline-flex items-center justify-center px-6 py-3.5 rounded-xl bg-bg-secondary text-text-primary hover:bg-bg-hover transition-[background-color,box-shadow] duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-primary min-h-12 shadow-sm"
+        >
+          Read the docs
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <Footer slot="footer" />
+</BaseLayout>
