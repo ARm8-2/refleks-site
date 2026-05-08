@@ -5,7 +5,7 @@ import DocsLayout from "../../layouts/DocsLayout.astro";
 <DocsLayout
   title="Runs Not Appearing"
   description="Troubleshoot missing scenario runs."
-  prevPage={{ slug: "stats-folder", title: "Stats Folder Issues" }}
+  prevPage={{ slug: "stats-folder", title: "KovaaK's Install Folder Configuration" }}
   nextPage={{ slug: "benchmark-issues", title: "Benchmark Issues" }}
 >
   <h2>New Runs Not Showing Up</h2>
@@ -14,11 +14,11 @@ import DocsLayout from "../../layouts/DocsLayout.astro";
     steps:
   </p>
 
-  <h2>Check the Stats Folder</h2>
+  <h2>Check the KovaaK's Install Folder</h2>
   <ol>
-    <li>Open Settings → General → Stats Folder</li>
-    <li>Verify the path is correct</li>
-    <li>Open the folder in File Explorer</li>
+    <li>Open Settings → General → KovaaK's Install Folder</li>
+    <li>Verify the path is correct (should contain a <code>FPSAimTrainer</code> subfolder)</li>
+    <li>Open the <code>FPSAimTrainer\stats</code> folder in File Explorer</li>
     <li>Check that new CSV files are being created when you play</li>
   </ol>
 
@@ -35,7 +35,7 @@ import DocsLayout from "../../layouts/DocsLayout.astro";
   <ul>
     <li>Open KovaaK's settings</li>
     <li>Verify that stats saving is enabled</li>
-    <li>Check that CSV format is selected</li>
+    <li>Make sure it's saving to the default stats folder inside FPSAimTrainer</li>
   </ul>
 
   <h2>File Permissions</h2>
