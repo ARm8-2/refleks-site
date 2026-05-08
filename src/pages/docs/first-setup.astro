@@ -14,7 +14,10 @@ import DocsLayout from "../../layouts/DocsLayout.astro";
     will automatically:
   </p>
   <ul>
-    <li>Detect your KovaaK's stats folder from your Steam installation</li>
+    <li>
+      Detect your KovaaK's installation folder from your Steam installation
+    </li>
+    <li>Locate your stats and performances folders within it</li>
     <li>Start monitoring for new scenario runs</li>
     <li>Import your existing stats history</li>
   </ul>
@@ -23,7 +26,8 @@ import DocsLayout from "../../layouts/DocsLayout.astro";
   <p>RefleK's comes with sensible defaults that work for most users:</p>
   <ul>
     <li>
-      <strong>Stats folder:</strong> Automatically detected from your KovaaK's installation
+      <strong>KovaaK's Install Folder:</strong> Automatically detected from your Steam
+      installation
     </li>
     <li>
       <strong>Session gap:</strong> 20 minutes (runs within this gap are grouped together)
@@ -51,26 +55,33 @@ import DocsLayout from "../../layouts/DocsLayout.astro";
 
   <h2>Manual Configuration</h2>
   <p>
-    If RefleK's can't detect your stats folder automatically, you can set it
-    manually:
+    If RefleK's can't detect your KovaaK's installation automatically, you can
+    set it manually:
   </p>
   <ol>
     <li>Open Settings (gear icon in the top right)</li>
-    <li>Go to General → Stats Folder</li>
-    <li>Enter the path to your KovaaK's stats folder</li>
+    <li>Go to General → KovaaK's Install Folder</li>
+    <li>
+      Enter the path to your KovaaK's installation folder (the folder containing <code
+        >FPSAimTrainer</code
+      >)
+    </li>
   </ol>
 
-  <p>The default stats folder location is:</p>
+  <p>The default KovaaK's installation location on Windows is:</p>
   <p>
-    <code
-      >C:\Program Files
-      (x86)\Steam\steamapps\common\FPSAimTrainer\FPSAimTrainer\stats</code
-    >
+    <code>C:\Program Files (x86)\Steam\steamapps\common\FPSAimTrainer</code>
+  </p>
+
+  <p>
+    RefleK's will automatically look for stats and performances within the <code
+      >FPSAimTrainer</code
+    > subfolder.
   </p>
 
   <div class="note">
-    <strong>Tip:</strong> If you have a custom Steam library location, the stats folder
-    will be in that library's steamapps folder.
+    <strong>Tip:</strong> If you have a custom Steam library location, KovaaK's will
+    be installed in that library's steamapps folder instead.
   </div>
 
   <h2>Steam Integration</h2>

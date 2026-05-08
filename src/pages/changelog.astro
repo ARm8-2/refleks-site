@@ -6,6 +6,34 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 // Releases data
 const releases = [
   {
+    version: '0.8.3',
+    date: 'May 8, 2026',
+    title: 'Last Played Highlight & Bug Fixes',
+    description: 'A patch focused on UI improvements and bug fixes for accuracy and benchmark visualization.',
+    sections: [
+      {
+        title: 'New Features',
+        items: [
+          'Added "Last Played" highlight toggle in benchmark progress tables to easily identify your most recently played scenario',
+        ],
+      },
+      {
+        title: 'Improvements',
+        items: [
+          'Enhanced benchmark settings with better folder configuration guidance',
+          'Refined internal path handling',
+        ],
+      },
+      {
+        title: 'Bug Fixes',
+        items: [
+          'Fixed accuracy percentage display calculation in the Last Run widget',
+          'Fixed rank band color assignment in scenario history charts',
+        ],
+      },
+    ],
+  },
+  {
     version: '0.8.2',
     date: 'May 2, 2026',
     title: 'Update Flow Improvements',
