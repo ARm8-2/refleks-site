@@ -1,0 +1,84 @@
+---
+import DocsLayout from "../../layouts/DocsLayout.astro";
+---
+
+<DocsLayout
+  title="Replay"
+  description="Play back screen captures of your runs directly inside RefleK's."
+  prevPage={{ slug: "mouse-tracking", title: "Mouse Movement" }}
+  nextPage={{ slug: "themes", title: "Themes" }}
+>
+  <h2>Overview</h2>
+  <p>
+    The Replay feature records a screen capture of your KovaaK's runs and plays
+    them back inside RefleK's, letting you watch exactly what happened during
+    any scenario — your crosshair placement, target transitions, and overall
+    movement — frame by frame.
+  </p>
+
+  <h2>How It Works</h2>
+  <p>
+    When replay recording is enabled, RefleK's captures your screen at a high
+    rate during your runs. The capture is saved locally alongside your run data
+    and can be played back from the replay viewer.
+  </p>
+
+  <h2>Performance & Resource Usage</h2>
+  <p>
+    Replay is designed to be as performant and resource-efficient as possible.
+    The capture pipeline uses GPU encoding to record your screen, so there is no
+    significant impact on your CPU or game performance while recording.
+  </p>
+  <p>
+    Even while actively recording a run, the additional RAM usage is only around
+    50 MB — the feature is extremely lightweight during capture.
+  </p>
+  <p>
+    During playback, you may notice a higher increase in RAM usage. This is
+    because the video is rendered through the webview, which allocates additional
+    memory to decode and display the capture smoothly.
+  </p>
+
+  <ul>
+    <li>
+      <strong>Disk space</strong> — capture files are stored locally and will
+      accumulate over time; you can delete individual captures after watching
+      them from the replay viewer
+    </li>
+    <li>
+      <strong>GPU-accelerated capture</strong> — encoding is handled by your
+      GPU, keeping CPU overhead to a minimum during recording
+    </li>
+  </ul>
+
+  <div class="note">
+    <strong>Tip:</strong> If you're on a system with limited RAM, you can disable
+    replay recording per-session or toggle it off entirely in settings while still
+    keeping stat tracking and mouse movement analysis active.
+  </div>
+
+  <h2>Playback Controls</h2>
+  <p>Once a run has a replay capture, you can:</p>
+  <ul>
+    <li><strong>Play / Pause</strong> — watch the run at normal speed</li>
+    <li><strong>Speed control</strong> — slow down to study movements or speed up to skip through</li>
+    <li><strong>Scrub</strong> — jump to any moment in the run</li>
+    <li><strong>Full-screen mode</strong> — expand the replay for a closer look</li>
+  </ul>
+
+  <div class="warning">
+    <strong>Anticheat Warning:</strong> Replay captures your screen
+    using low-level system APIs. While RefleK's is designed to work safely with
+    KovaaK's, some kernel-level anticheat systems in other games (such as Vanguard
+    or FACEIT) may misinterpret screen capture calls as intrusive behavior. If you
+    play games with aggressive anticheats, consider closing RefleK's before
+    launching those games or disable replay recording when not using KovaaK's.
+  </div>
+
+  <h2>Data & Privacy</h2>
+  <p>
+    All replay captures are stored locally on your machine. RefleK's does not
+    upload or share your screen captures anywhere. You can delete individual
+    captures after watching them from the replay viewer.
+  </p>
+</DocsLayout>
