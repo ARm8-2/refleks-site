@@ -341,9 +341,9 @@ const releases = [
   <Header slot="header" currentPath="/changelog" />
 
   <!-- Hero -->
-  <section class="pt-20 pb-8 sm:pt-24 sm:pb-12">
+  <section class="pt-20 pb-12 sm:pt-24 sm:pb-16">
     <div class="max-w-5xl 2xl:max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <p class="text-accent-primary font-medium text-sm 2xl:text-base mb-3">Changelog</p>
+      <p class="text-accent-primary font-medium text-sm 2xl:text-base mb-4">Changelog</p>
       <h1 class="text-3xl sm:text-4xl md:text-5xl 2xl:text-6xl font-semibold tracking-tight text-text-primary">
         What's new in RefleK's
       </h1>
@@ -351,7 +351,7 @@ const releases = [
   </section>
 
   <!-- Releases -->
-  <section class="py-8 sm:py-12 pb-24">
+  <section class="py-16 sm:py-20 pb-24">
     <div class="max-w-7xl 2xl:max-w-[120rem] mx-auto px-4 sm:px-6 lg:px-8">
       <div class="space-y-20 sm:space-y-24">
         {releases.map((release) => (
@@ -366,7 +366,7 @@ const releases = [
 
             <!-- Middle column: Content (text-left but column is centered) -->
             <div class="text-left">
-              <h2 class="text-2xl sm:text-3xl font-medium text-text-primary mb-3">
+              <h2 class="text-2xl sm:text-3xl font-medium text-text-primary mb-4">
                 {release.title}
               </h2>
               <p class="text-text-secondary leading-relaxed mb-8">
@@ -377,7 +377,7 @@ const releases = [
               <div class="space-y-8 mb-8">
                 {release.sections.map((section) => (
                   <div>
-                    <h3 class="text-base font-semibold text-text-primary mb-3">
+                    <h3 class="text-base font-semibold text-text-primary mb-4">
                       {section.title}
                     </h3>
                     <ul class="space-y-2 mb-4">
