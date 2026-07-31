@@ -1,0 +1,220 @@
+---
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout
+  title="API - RefleK's"
+  description="Production REST API for the RefleK's platform including run sync, benchmarking, leaderboards, and scenario data."
+>
+  <Header slot="header" currentPath="/api" />
+
+  <!-- Hero -->
+  <section class="pt-20 pb-12 sm:pt-24 sm:pb-16">
+    <div class="max-w-5xl 2xl:max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <p class="text-accent-primary font-medium text-sm 2xl:text-base mb-4">
+        REST API
+      </p>
+      <h1
+        class="text-3xl sm:text-4xl md:text-5xl 2xl:text-6xl font-semibold tracking-tight text-text-primary"
+      >
+        RefleK's API
+      </h1>
+      <p class="mt-6 sm:mt-8 text-lg sm:text-xl text-text-secondary max-w-2xl mx-auto">
+        A production Go monolith that powers run archiving, benchmarks,
+        leaderboards, and scenario data for the RefleK's&nbsp;platform.
+      </p>
+    </div>
+  </section>
+
+  <!-- Overview -->
+  <section class="py-16 sm:py-20">
+    <div class="max-w-7xl 2xl:max-w-[120rem] mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12 items-center">
+        <div class="lg:col-span-2">
+          <h2
+            class="text-2xl sm:text-3xl md:text-4xl 2xl:text-5xl font-medium text-text-primary mb-6"
+          >
+            What is RefleK's API?
+          </h2>
+          <p class="text-text-secondary text-base 2xl:text-lg leading-relaxed mb-4">
+            The RefleK's API is a production-oriented Go monolith that backs the
+            RefleK's platform. It handles run sync from the desktop app,
+            serves benchmark and leaderboard data, and exposes scenario
+            and player browsing endpoints, all backed by Postgres and
+            Cloudflare&nbsp;R2.
+          </p>
+          <p class="text-text-secondary text-base 2xl:text-lg leading-relaxed">
+            Built for long-term maintainability with structured logging,
+            middleware-ready HTTP, and graceful shutdown. The endpoints are
+            publicly available and ready for integration with no authentication
+            required for core read and download&nbsp;operations.
+          </p>
+        </div>
+        <div class="rounded-xl overflow-hidden shadow-2xl">
+          <img
+            src="/assets/images/api.webp"
+            alt="API terminal output showing request handling"
+            loading="lazy"
+            width="3000"
+            height="1800"
+            class="w-full h-auto"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="py-16 sm:py-20">
+    <div class="max-w-7xl 2xl:max-w-[120rem] mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2
+          class="text-2xl sm:text-3xl md:text-4xl 2xl:text-5xl font-medium text-text-primary mb-4"
+        >
+          What's Available
+        </h2>
+        <p class="text-text-muted 2xl:text-lg">
+          The API exposes a rich set of endpoints for the
+          RefleK's ecosystem.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <article class="rounded-xl bg-bg-secondary overflow-hidden p-6">
+          <div class="w-10 h-10 rounded-xl bg-accent-primary/20 flex items-center justify-center mb-4">
+            <svg class="w-5 h-5 text-accent-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12" />
+            </svg>
+          </div>
+          <h3 class="text-base font-semibold text-text-primary mb-2">Run Archive</h3>
+          <p class="text-sm text-text-muted leading-relaxed">
+            Browse and download raw <code>.refleks</code> run files with full metadata,
+            mouse traces, and player&nbsp;details.
+          </p>
+        </article>
+        <article class="rounded-xl bg-bg-secondary overflow-hidden p-6">
+          <div class="w-10 h-10 rounded-xl bg-accent-primary/20 flex items-center justify-center mb-4">
+            <svg class="w-5 h-5 text-accent-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+            </svg>
+          </div>
+          <h3 class="text-base font-semibold text-text-primary mb-2">Benchmarks & Leaderboards</h3>
+          <p class="text-sm text-text-muted leading-relaxed">
+            Full benchmark hierarchy browsing with rank thresholds, scenario
+            links, and per-scenario and per-difficulty leaderboard&nbsp;endpoints.
+          </p>
+        </article>
+        <article class="rounded-xl bg-bg-secondary overflow-hidden p-6">
+          <div class="w-10 h-10 rounded-xl bg-accent-primary/20 flex items-center justify-center mb-4">
+            <svg class="w-5 h-5 text-accent-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+            </svg>
+          </div>
+          <h3 class="text-base font-semibold text-text-primary mb-2">Scenario Browser</h3>
+          <p class="text-sm text-text-muted leading-relaxed">
+            Searchable, sortable scenarios with run counts, score
+            distributions, and sensitivity distributions for deep
+            population-level&nbsp;analysis.
+          </p>
+        </article>
+        <article class="rounded-xl bg-bg-secondary overflow-hidden p-6">
+          <div class="w-10 h-10 rounded-xl bg-accent-primary/20 flex items-center justify-center mb-4">
+            <svg class="w-5 h-5 text-accent-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+            </svg>
+          </div>
+          <h3 class="text-base font-semibold text-text-primary mb-2">Player Browser</h3>
+          <p class="text-sm text-text-muted leading-relaxed">
+            Search and sort players by username or Steam ID with run counts
+            and last activity&nbsp;timestamps.
+          </p>
+        </article>
+        <article class="rounded-xl bg-bg-secondary overflow-hidden p-6">
+          <div class="w-10 h-10 rounded-xl bg-accent-primary/20 flex items-center justify-center mb-4">
+            <svg class="w-5 h-5 text-accent-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+            </svg>
+          </div>
+          <h3 class="text-base font-semibold text-text-primary mb-2">Status & Stats</h3>
+          <p class="text-sm text-text-muted leading-relaxed">
+            Health check endpoint and aggregate database statistics
+            including total runs, players, and scenarios at a&nbsp;glance.
+          </p>
+        </article>
+        <a
+          href="https://github.com/ARm8-2/refleks-api"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="rounded-xl bg-bg-secondary overflow-hidden p-6 block group hover:bg-bg-hover transition-colors"
+        >
+          <div class="w-10 h-10 rounded-xl bg-accent-primary/20 flex items-center justify-center mb-4 group-hover:bg-accent-primary/30 transition-colors">
+            <svg class="w-5 h-5 text-accent-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+            </svg>
+          </div>
+          <h3 class="text-base font-semibold text-text-primary mb-2 group-hover:text-accent-primary transition-colors">
+            Full Documentation
+            <svg class="w-4 h-4 inline-block ml-1.5 -mt-0.5 text-text-muted group-hover:text-accent-primary transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+            </svg>
+          </h3>
+          <p class="text-sm text-text-muted leading-relaxed">
+            Every endpoint, configuration option, and response format is
+            documented in the repository README on&nbsp;GitHub.
+          </p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Open Source -->
+  <section class="py-20 sm:py-28">
+    <div class="max-w-7xl 2xl:max-w-[120rem] mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="rounded-xl bg-bg-secondary overflow-hidden">
+        <div class="p-8 sm:p-10 lg:p-12 text-center">
+          <div
+            class="w-12 h-12 rounded-xl bg-accent-primary/20 flex items-center justify-center mx-auto mb-6"
+          >
+            <svg
+              class="w-6 h-6 text-accent-primary"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl sm:text-2xl font-bold text-text-primary mb-4">
+            Open Source
+          </h3>
+          <p class="text-text-muted max-w-xl mx-auto mb-6">
+            RefleK's API is licensed under AGPL-3.0. The full source,
+            endpoint reference, and configuration guide are available
+            on&nbsp;GitHub.
+          </p>
+          <a
+            href="https://github.com/ARm8-2/refleks-api"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-2 text-accent-primary hover:text-accent-light font-medium transition-colors"
+          >
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
+              ></path>
+            </svg>
+            View on GitHub
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <Footer slot="footer" />
+</BaseLayout>
