@@ -1,0 +1,248 @@
+---
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout
+  title="Research - RefleK's"
+  description="Open-science data analytics and machine learning research for human kinetic telemetry."
+>
+  <Header slot="header" currentPath="/research" />
+
+  <!-- Hero -->
+  <section class="pt-20 pb-12 sm:pt-24 sm:pb-16">
+    <div class="max-w-5xl 2xl:max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <p class="text-accent-primary font-medium text-sm 2xl:text-base mb-4">
+        Open Science
+      </p>
+      <h1
+        class="text-3xl sm:text-4xl md:text-5xl 2xl:text-6xl font-semibold tracking-tight text-text-primary"
+      >
+        RefleK's Research
+      </h1>
+      <p class="mt-6 sm:mt-8 text-lg sm:text-xl text-text-secondary max-w-2xl mx-auto">
+        Data analytics and machine learning research environment for human
+        kinetic telemetry.
+      </p>
+    </div>
+  </section>
+
+  <!-- Overview -->
+  <section class="py-16 sm:py-20">
+    <div class="max-w-7xl 2xl:max-w-[120rem] mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12 items-center">
+        <div class="lg:col-span-2">
+          <h2
+            class="text-2xl sm:text-3xl md:text-4xl 2xl:text-5xl font-medium text-text-primary mb-6"
+          >
+            What is RefleK's Research?
+          </h2>
+          <p class="text-text-secondary text-base 2xl:text-lg leading-relaxed mb-4">
+            The RefleK's Research repository serves as the open-science data
+            analytics and machine learning research environment for the RefleK's
+            platform. It houses the data processing routines, specialized
+            datasets, and training pipelines used to model human kinetic
+            telemetry.
+          </p>
+          <p class="text-text-secondary text-base 2xl:text-lg leading-relaxed">
+            The repository acts as a structural envelope for isolated,
+            domain-specific research workspaces with their own dependencies
+            and documentation, maintaining an open, language-agnostic structure.
+          </p>
+        </div>
+        <div class="rounded-xl overflow-hidden shadow-2xl">
+          <img
+            src="/assets/images/inputs.webp"
+            alt="Code editor showing research workspace structure"
+            loading="lazy"
+            width="3000"
+            height="1800"
+            class="w-full h-auto"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Data Assets -->
+  <section class="py-16 sm:py-20">
+    <div class="max-w-7xl 2xl:max-w-[120rem] mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2
+          class="text-2xl sm:text-3xl md:text-4xl 2xl:text-5xl font-medium text-text-primary mb-4"
+        >
+          A Unique Dataset
+        </h2>
+        <p class="text-text-muted 2xl:text-lg">
+          The research repository is built on a growing archive of real human
+          aiming data collected through RefleK's Desktop.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        <article class="rounded-xl bg-bg-secondary overflow-hidden p-6">
+          <p class="text-3xl sm:text-4xl font-bold text-accent-primary mb-2">
+            150,000+
+          </p>
+          <p class="text-sm text-text-muted leading-relaxed">
+            Recorded runs with full telemetry metadata
+          </p>
+        </article>
+        <article class="rounded-xl bg-bg-secondary overflow-hidden p-6">
+          <p class="text-3xl sm:text-4xl font-bold text-accent-primary mb-2">
+            125,000+
+          </p>
+          <p class="text-sm text-text-muted leading-relaxed">
+            Runs with 125 Hz raw mouse traces
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Research Workspaces -->
+  <section class="py-16 sm:py-20">
+    <div class="max-w-7xl 2xl:max-w-[120rem] mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2
+          class="text-2xl sm:text-3xl md:text-4xl 2xl:text-5xl font-medium text-text-primary mb-4"
+        >
+          Research Workspaces
+        </h2>
+        <p class="text-text-muted 2xl:text-lg">
+          Each workspace is an isolated, self-contained environment with its
+          own dependencies and documentation. Models are exported as
+          INT8 Quantized ONNX for native inference in RefleK's&nbsp;Desktop.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
+        <!-- GRU Engine -->
+        <article class="rounded-xl bg-bg-secondary overflow-hidden flex flex-col">
+          <div class="p-6 sm:p-8 flex items-center justify-center bg-bg-tertiary/50 h-64">
+            <div class="rounded-xl overflow-hidden shadow-2xl w-full h-full">
+              <img
+                src="/assets/images/training_code.webp"
+                alt="GRU training loss curves"
+                loading="lazy"
+                width="3000"
+                height="1800"
+                class="w-full h-full object-cover object-center"
+              />
+            </div>
+          </div>
+          <div class="p-6 flex flex-col flex-1">
+            <h3 class="text-lg sm:text-xl font-semibold text-text-primary mb-2">
+              Mouse Deviation Analysis (GRU Engine)
+            </h3>
+            <p class="text-sm text-text-muted leading-relaxed flex-1">
+              A Gated Recurrent Unit neural network trained over cursor
+              acceleration vectors to classify target overshoot and undershoot
+              dynamics in raw mouse tracking streams.
+            </p>
+            <div class="flex flex-wrap gap-2 mt-4">
+              <span class="px-3 py-1 rounded-full bg-bg-tertiary text-text-muted text-xs font-medium">PyTorch</span>
+              <span class="px-3 py-1 rounded-full bg-bg-tertiary text-text-muted text-xs font-medium">GRU</span>
+              <span class="px-3 py-1 rounded-full bg-bg-tertiary text-text-muted text-xs font-medium">ONNX</span>
+              <span class="px-3 py-1 rounded-full bg-bg-tertiary text-text-muted text-xs font-medium">CUDA</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Autoencoder Engine -->
+        <article class="rounded-xl bg-bg-secondary overflow-hidden flex flex-col">
+          <div class="p-8 sm:p-10 flex items-center justify-center bg-bg-tertiary/50 h-64">
+            <div class="text-center">
+              <div class="w-10 h-10 rounded-xl bg-accent-primary/20 flex items-center justify-center mx-auto mb-3">
+                <svg class="w-5 h-5 text-accent-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                </svg>
+              </div>
+              <p class="text-sm text-text-muted leading-relaxed max-w-xs mx-auto">
+                This workspace hasn't been started yet — contribute your implementation on GitHub.
+              </p>
+              <a
+                href="https://github.com/ARm8-2/refleks-research"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex items-center gap-1.5 mt-3 text-accent-primary hover:text-accent-light font-medium text-xs transition-colors"
+              >
+                <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                </svg>
+                Contribute on GitHub
+              </a>
+            </div>
+          </div>
+          <div class="p-6 flex flex-col flex-1">
+            <h3 class="text-lg sm:text-xl font-semibold text-text-primary mb-2">
+              Scenario Recommendation (Autoencoder Engine)
+            </h3>
+            <p class="text-sm text-text-muted leading-relaxed flex-1">
+              A collaborative embedding network and shallow bottleneck
+              autoencoder that projects player history into a latent space,
+              using cosine similarity to identify weaknesses and recommend
+              targeted training routines.
+            </p>
+            <div class="flex flex-wrap gap-2 mt-4">
+              <span class="px-3 py-1 rounded-full bg-bg-tertiary text-text-muted text-xs font-medium">PyTorch</span>
+              <span class="px-3 py-1 rounded-full bg-bg-tertiary text-text-muted text-xs font-medium">Autoencoder</span>
+              <span class="px-3 py-1 rounded-full bg-bg-tertiary text-text-muted text-xs font-medium">ONNX</span>
+              <span class="px-3 py-1 rounded-full bg-bg-tertiary text-text-muted text-xs font-medium">Embeddings</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Open Source -->
+  <section class="py-20 sm:py-28">
+    <div class="max-w-7xl 2xl:max-w-[120rem] mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="rounded-xl bg-bg-secondary overflow-hidden">
+        <div class="p-8 sm:p-10 lg:p-12 text-center">
+          <div
+            class="w-12 h-12 rounded-xl bg-accent-primary/20 flex items-center justify-center mx-auto mb-6"
+          >
+            <svg
+              class="w-6 h-6 text-accent-primary"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl sm:text-2xl font-bold text-text-primary mb-4">
+            Open Source & Open Science
+          </h3>
+          <p class="text-text-muted max-w-xl mx-auto mb-6">
+            RefleK's Research is MIT licensed. Models, weights, and
+            datasets are governed by CC BY 4.0.
+            We welcome contributions to existing tracks or new workspace proposals.
+          </p>
+          <a
+            href="https://github.com/ARm8-2/refleks-research"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-2 text-accent-primary hover:text-accent-light font-medium transition-colors"
+          >
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
+              ></path>
+            </svg>
+            View on GitHub
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <Footer slot="footer" />
+</BaseLayout>

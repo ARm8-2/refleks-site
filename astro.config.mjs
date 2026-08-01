@@ -9,8 +9,6 @@ export default defineConfig({
   site: 'https://refleksapp.com',
   outDir: './docs',
   redirects: {
-    '/features': '/',
-    '/docs/sessions': '/docs/history'
   },
   integrations: [sitemap()],
   vite: {

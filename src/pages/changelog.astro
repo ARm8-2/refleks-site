@@ -6,6 +6,37 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 // Releases data
 const releases = [
   {
+    version: '0.9.0',
+    date: 'August 1, 2026',
+    title: 'Target Inference, Replay & Performance Overhaul',
+    description: 'A major update introducing replay support, a target inference engine in the mouse trace tab, a new efficient file format, richer run data, and the usual UI refinements and bug fixes.',
+    sections: [
+      {
+        title: 'New Features',
+        items: [
+          'Replay: play back a screen capture of your runs directly inside the app',
+          'Target inference engine in the Mouse Trace tab that estimates likely target positions from raw mouse movement data',
+          'More detailed run data exposed throughout the app for deeper analysis',
+        ],
+      },
+      {
+        title: 'Improvements',
+        items: [
+          'Redesigned mouse trace analysis engine for more accurate feedback and classification of over/undershoot patterns',
+          'New file format that improves storage efficiency and enables faster loading',
+          'Various performance optimizations and internal efficiency improvements',
+          'Various UI refinements and visual polish',
+        ],
+      },
+      {
+        title: 'Bug Fixes',
+        items: [
+          'Fixed various edge cases and stability issues',
+        ],
+      },
+    ],
+  },
+  {
     version: '0.8.3',
     date: 'May 8, 2026',
     title: 'Last Played Highlight & Bug Fixes',
@@ -311,18 +342,18 @@ const releases = [
   <Header slot="header" currentPath="/changelog" />
 
   <!-- Hero -->
-  <section class="pt-20 pb-8 sm:pt-24 sm:pb-12">
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <p class="text-accent-primary font-medium text-sm mb-3">Changelog</p>
-      <h1 class="text-3xl sm:text-4xl md:text-5xl font-semibold tracking-tight text-text-primary">
+  <section class="pt-20 pb-12 sm:pt-24 sm:pb-16">
+    <div class="max-w-5xl 2xl:max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <p class="text-accent-primary font-medium text-sm 2xl:text-base mb-4">Changelog</p>
+      <h1 class="text-3xl sm:text-4xl md:text-5xl 2xl:text-6xl font-semibold tracking-tight text-text-primary">
         What's new in RefleK's
       </h1>
     </div>
   </section>
 
   <!-- Releases -->
-  <section class="py-8 sm:py-12 pb-24">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  <section class="py-16 sm:py-20 pb-24">
+    <div class="max-w-7xl 2xl:max-w-[120rem] mx-auto px-4 sm:px-6 lg:px-8">
       <div class="space-y-20 sm:space-y-24">
         {releases.map((release) => (
           <article class="grid grid-cols-1 lg:grid-cols-[260px_2fr_260px] gap-6 lg:gap-8">
@@ -336,7 +367,7 @@ const releases = [
 
             <!-- Middle column: Content (text-left but column is centered) -->
             <div class="text-left">
-              <h2 class="text-2xl sm:text-3xl font-medium text-text-primary mb-3">
+              <h2 class="text-2xl sm:text-3xl font-medium text-text-primary mb-4">
                 {release.title}
               </h2>
               <p class="text-text-secondary leading-relaxed mb-8">
@@ -347,7 +378,7 @@ const releases = [
               <div class="space-y-8 mb-8">
                 {release.sections.map((section) => (
                   <div>
-                    <h3 class="text-base font-semibold text-text-primary mb-3">
+                    <h3 class="text-base font-semibold text-text-primary mb-4">
                       {section.title}
                     </h3>
                     <ul class="space-y-2 mb-4">
