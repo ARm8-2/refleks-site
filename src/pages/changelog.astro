@@ -6,6 +6,28 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 // Releases data
 const releases = [
   {
+    version: '0.9.2',
+    date: 'August 2, 2026',
+    title: 'Elevated Launch & Autostart Fixes',
+    description: 'A patch that makes startup more reliable: the app now drops installer elevation before launch, "Start with KovaaK\'s" stays in sync with the installed executable, and the window no longer steals focus from KovaaK\'s.',
+    sections: [
+      {
+        title: 'Improvements',
+        items: [
+          'The app now relaunches itself with normal privileges when started elevated (e.g. from the installer), so an elevated instance can no longer interfere with an already running copy',
+          '"Start with KovaaK\'s" is now kept in sync with the installed executable: the installer re-registers it after updates and removes it when uninstalling',
+          'RefleK\'s no longer steals focus from KovaaK\'s when it appears while the game is running',
+        ],
+      },
+      {
+        title: 'Bug Fixes',
+        items: [
+          'Fixed a stale autostart entry launching a hidden instance even after "Start with KovaaK\'s" is turned off — the window now shows instead of leaving an invisible background process',
+        ],
+      },
+    ],
+  },
+  {
     version: '0.9.1',
     date: 'August 1, 2026',
     title: 'Update & Autostart Fixes',
