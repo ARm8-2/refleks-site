@@ -6,6 +6,21 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 // Releases data
 const releases = [
   {
+    version: '0.9.3',
+    date: 'August 2, 2026',
+    title: 'Update Reliability Fixes',
+    description: 'A patch that makes in-app updates more reliable: the installer now finds the previous installation on its own, so upgrades from older versions replace the right install instead of leaving a broken one behind.',
+    sections: [
+      {
+        title: 'Bug Fixes',
+        items: [
+          'Fixed in-app updates from 0.8.3 and earlier not replacing the installation that launched the update — the installer now recovers the previous install directory from the registry',
+          'Fixed updates failing or aborting while the old app was still shutting down: the installer now stops the running app without killing itself and replaces the files in place instead of wiping the install folder',
+        ],
+      },
+    ],
+  },
+  {
     version: '0.9.2',
     date: 'August 2, 2026',
     title: 'Elevated Launch & Autostart Fixes',
