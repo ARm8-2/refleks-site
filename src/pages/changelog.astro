@@ -6,6 +6,39 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 // Releases data
 const releases = [
   {
+    version: '0.9.4',
+    date: 'August 5, 2026',
+    title: 'Replay Export & Capture Health',
+    description: 'Export replays anywhere, watch screen capture health with automatic recovery, and a faster run history — plus the usual reliability fixes.',
+    sections: [
+      {
+        title: 'New Features',
+        items: [
+          'Export replays: save any recorded run replay to a folder of your choice from the replay player',
+          'Replay status is now shown in the history inspector and updates the moment a replay finishes processing instead of polling',
+          'Live screen capture health in Settings with automatic recovery from failures like a lost display or a crashed FFmpeg process',
+        ],
+      },
+      {
+        title: 'Improvements',
+        items: [
+          'Changing capture resolution or FPS while the game is running now applies immediately by rotating the capture session',
+          'Run history loads faster and shows more runs by default (180 days or 2500 runs)',
+          'Capture keeps a constant frame rate even on a static screen, so replay timing stays accurate',
+          'Abandoned update downloads and interrupted capture sessions are cleaned up on the next launch',
+        ],
+      },
+      {
+        title: 'Bug Fixes',
+        items: [
+          'Fixed capture sessions not recovering after an FFmpeg crash or display loss',
+          'Fixed replays being lost when capture stopped shortly after a run ended — the trim now falls back to the full run window',
+          'Fixed runs ingested late being matched to the wrong capture session, which could lose their replay',
+        ],
+      },
+    ],
+  },
+  {
     version: '0.9.3',
     date: 'August 2, 2026',
     title: 'Update Reliability Fixes',
