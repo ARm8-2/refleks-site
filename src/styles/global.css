@@ -25,6 +25,12 @@
 
   /* Fonts */
   --font-sans: 'Montserrat', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+  /* Breakpoints: the largest-monitor scaling tier is gated at 2560px (2K/QHD+).
+     The default `2xl` (1536px) also applies to 1080p (1920px) viewports, so the
+     wide containers use an intermediate tier (2xl:max-w-[96rem]) there instead of
+     filling the whole screen, which made side padding disappear at 1080p. */
+  --breakpoint-3xl: 160rem;
 }
 
 /* CSS Custom Properties for non-Tailwind usage */
