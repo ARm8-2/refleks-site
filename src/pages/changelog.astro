@@ -6,6 +6,21 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 // Releases data
 const releases = [
   {
+    version: '0.9.5',
+    date: 'August 8, 2026',
+    title: 'Replay Cleanup & Retention',
+    description: 'Take control of your replay storage with automatic cleanup: set an age limit, a storage cap, or both, and let RefleK\'s tidy up old replays for you — at startup and as new replays are created.',
+    sections: [
+      {
+        title: 'New Features',
+        items: [
+          'Automatic replay cleanup with optional age limit (1 day to 1 month) and storage cap (1 GB to 25 GB), or unlimited',
+          'Cleanup runs at startup, when replay settings change, and after new replays finish processing',
+        ],
+      },
+    ],
+  },
+  {
     version: '0.9.4',
     date: 'August 5, 2026',
     title: 'Replay Export & Capture Health',
