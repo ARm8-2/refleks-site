@@ -6,6 +6,34 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 // Releases data
 const releases = [
   {
+    version: '0.9.6',
+    date: 'August 12, 2026',
+    title: 'UI Scale & Deep-Link Fixes',
+    description: 'A new interface scale setting (60%–150%), a cleaner recommendation column with an inline legend, and more reliable Steam deep-links for launching scenarios and playlists.',
+    sections: [
+      {
+        title: 'New Features',
+        items: [
+          'New Scale setting (60%–150%) adjusts the entire interface size for large or small screens',
+          'Recommendation column now includes an info tooltip explaining every indicator',
+        ],
+      },
+      {
+        title: 'Improvements',
+        items: [
+          'Steam deep-links now properly percent-encode scenario names, modes, and sharecodes so special characters no longer break launching',
+          'UI spacing and sizing converted to rem units so the scale setting applies consistently across the app',
+        ],
+      },
+      {
+        title: 'Bug Fixes',
+        items: [
+          'Fixed playlist link errors in the benchmark detail page and overview widget being silently swallowed',
+        ],
+      },
+    ],
+  },
+  {
     version: '0.9.5',
     date: 'August 8, 2026',
     title: 'Replay Cleanup & Retention',
